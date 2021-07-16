@@ -19,3 +19,47 @@ const connection = mysql.createConnection({
   password: 'berian27',
   database: 'managerDB',
 });
+
+
+
+
+
+const addDepartment = () => {
+    connection.query(
+        'INSERT INTO department SET ?',
+    {
+        name: '',
+    },  
+    (err, res) => {if (err) throw err;
+    console.table(`${res.affectedRows} Department Inserted!\n`);}
+    )
+};
+
+
+const addRoles = () => {
+    connection.query(
+        'INSERT INTO role SET ?',
+    {
+        title: '',
+        salary: '',
+        department_id: '',
+    },  
+    (err, res) => {if (err) throw err;
+    console.table(`${res.affectedRows} Role Inserted!\n`);}
+    )
+};
+
+const addEmployee = () => {
+    connection.query(
+        'INSERT INTO employee SET ?',
+    {
+        first_name: '',
+        last_name: '',
+        role_id: '',
+        manager_id: '',
+    },  
+    (err, res) => {if (err) throw err;
+    console.table(`${res.affectedRows} employee Inserted!\n`);}
+    )
+};
+
