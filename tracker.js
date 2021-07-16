@@ -95,3 +95,19 @@ const addEmployee = () => {
     )
 };
 
+//update employee roles
+
+const updateRole = () => {
+    connection.query( 'UPDATE employee SET ? WHERE ?',
+    
+    [
+        {
+            role_id: ''
+    },
+    {
+            last_name: '' //matching last name
+    },
+],
+(err, res) => {if (err) throw err;
+console.table(`${res.affectedRows} updated!\n`)})
+};
