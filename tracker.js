@@ -24,6 +24,38 @@ const connection = mysql.createConnection({
 
 
 
+
+
+
+// functions for viewing
+
+const viewDepartment = () => {
+    connection.query ('SELECT * FROM department', (err, res) => {
+        if (err) throw err;
+        console.table(res);
+      
+    })
+};
+
+const viewRoles = () => {
+    connection.query ('SELECT * FROM role', (err, res) => {
+        if (err) throw err;
+        console.table(res);
+      
+    })
+};
+
+const viewEmployees = () => {
+    connection.query ('SELECT * FROM employee', (err, res) => {
+        if (err) throw err;
+        console.table(res);
+        //connection.end();
+    })
+};
+
+
+// functions for adding 
+
 const addDepartment = () => {
     connection.query(
         'INSERT INTO department SET ?',
