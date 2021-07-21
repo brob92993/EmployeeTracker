@@ -21,14 +21,14 @@ const connection = mysql.createConnection({
 });
 
 
-//starting prompt
+//connection start
 
 connection.connect(function(err) {
     if (err) throw err
     console.log("Connected as Id" + connection.threadId)
     startPrompt();
 });
-//================== Initial Prompt =======================//
+// Starting prompt
 function startPrompt() {
     inquirer.prompt([
     {

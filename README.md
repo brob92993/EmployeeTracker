@@ -18,13 +18,15 @@
   
   ## Installation
   
-  To install necessary dependencies, run the following command: "npm i". 
+  To install necessary dependencies, run the following command: "npm i".
+
+  To run the app in the CLI: "node tracker.js".
   
   
   ## Usage
   
   
-  ![Walkthroughvideo]()
+  ![Walkthroughvideo](img/TrackerWalkthrough.gif)
 
   
   ## License
